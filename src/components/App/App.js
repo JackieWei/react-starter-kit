@@ -53,6 +53,12 @@ class App extends Component {
   }
 
   render() {
+    var props = "";
+    for(var key in this.props.children) {
+      props += key + "-->" + String.toString(this.props.children[key]) + "\n";
+    }
+    console.log(this.props.children);
+
     return !this.props.error ? (
       <div>
         <Header />
